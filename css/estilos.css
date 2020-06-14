@@ -1,0 +1,103 @@
+
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-family: helvetica;
+}
+
+/* ----------------------------Nav Bar----------------------------------------- */
+nav{
+    display: flex;
+    background-color: #7ACC2D;
+    padding: 10px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li{
+    padding-left: 20px;
+    list-style: none;
+}
+
+nav li a{
+    color: rgb(59, 58, 58);
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color: white;
+}
+
+/* ----------------------------Main section ----------------------------------------- */
+
+.main_section {
+    padding: 10%;
+    text-align: center;
+   
+}
+
+/* 
+    para agregar la curva en el main section no se agrega en el html, creamos 
+    otra section llamada product y ahi modificamos lo necesario
+*/
+
+/*
+continua elaboración del card para agregar imagen
+vamos a disminuir un poco la altura del elemento padre que es product
+los card aún no sobresalen cambiamos el height a 50px para ver como baja
+luego agregamos la imagen
+*/
+.products {
+    /* debemos ingresar la url para eso colocamos ../*/
+    background-image: url("../images/curve.png");
+    height: 20px; /* aui manipulamos la altura, despues lo cambia a max-height: ;*/
+    background-size: cover; /*significa que ocupe el tamoño del div que tiene*/
+    background-position: center top; /* alineate hacia el centro pero hacia arriba*/
+    /*padding: 20px; /*para poder ver la división de los elementos esto lo agregamos al agregar el padding de .product*/
+    padding: 20%; /* si le subimos al padding se hacen mas pequeños y se organizan mas al centro los card*/
+    display: flex;
+    
+}
+
+.product {
+    padding: 10px;
+    /*para poder subir los card product modificamos la propiedad margin originalmente tenia 160*/
+    margin-top: -300px;
+}
+
+.product .content{
+    background-color: white;
+    /*modificamos el pading de 20 a 15 para que no se haga muy grande el contenido*/
+    padding: 20px;
+    /*box shadow para remarcar el car*/
+    box-shadow: 0 0 1px #3a3939;
+}
+
+.img_content {
+    text-align: center;
+}
+
+.main_button{
+    background-color: #7ACC2D;
+    /*le damos un width de 100% para que ocuple todoo el espacio de la card*/
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    border: 0;
+    /*para mostrar el cambio del cursor*/
+    cursor: pointer;
+    /*cambiar el radio del boton*/
+    border-radius: 3px;
+}
+
+.main_button:hover {
+    background-color: #5e9222;
+}
